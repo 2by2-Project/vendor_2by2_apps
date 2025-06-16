@@ -27,12 +27,22 @@ android_app_import {
     certificate: "platform",
     privileged: true,
     product_specific: true,
-    required: ["privapp-permissions-com.aurora.services.xml"],
+    required: [
+        "privapp-permissions-com.aurora.services.xml",
+        "default-permissions-com.aurora.services.xml",
+    ],
 }
 
 prebuilt_etc {
     name: "privapp-permissions-com.aurora.services.xml",
     src: "AuroraServices/privapp-permissions-com.aurora.services.xml",
     relative_install_path: "permissions",
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "default-permissions-com.aurora.services.xml",
+    src: "AuroraServices/default-permissions-com.aurora.services.xml",
+    relative_install_path: "default-permissions",
     product_specific: true,
 }
