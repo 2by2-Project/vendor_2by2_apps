@@ -1,0 +1,22 @@
+//
+//  Copyright (C) 2025 The 2by2 Project
+//
+//  SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "AuroraStore",
+    apk: "AuroraStore/AuroraStore.apk",
+    certificate: "platform",
+    privileged: true,
+    product_specific: true,
+    required: ["privapp-permissions-com.aurora.store.xml"],
+    optional_uses_libs: ["androidx.window.extensions", "androidx.window.sidecar"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.aurora.store.xml",
+    src: "AuroraStore/privapp-permissions-com.aurora.store.xml",
+    relative_install_path: "permissions",
+    product_specific: true,
+}
