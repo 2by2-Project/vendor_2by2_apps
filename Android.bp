@@ -20,3 +20,19 @@ prebuilt_etc {
     relative_install_path: "permissions",
     product_specific: true,
 }
+
+android_app_import {
+    name: "AuroraServices",
+    apk: "AuroraServices/AuroraServices.apk",
+    certificate: "platform",
+    privileged: true,
+    product_specific: true,
+    required: ["privapp-permissions-com.aurora.services.xml"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.aurora.services.xml",
+    src: "AuroraServices/privapp-permissions-com.aurora.services.xml",
+    relative_install_path: "permissions",
+    product_specific: true,
+}
